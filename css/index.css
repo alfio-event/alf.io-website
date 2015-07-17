@@ -71,3 +71,7 @@ a.navbar-brand {
 .margin-10 {
     margin: 10px;
 }
+
+li.media {
+   margin-top:3em !important;
+}

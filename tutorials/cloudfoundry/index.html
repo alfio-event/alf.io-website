@@ -1,0 +1,84 @@
+---
+layout: default
+title:  Cloud Foundry deployment howto - Alf.io
+categories: tutorial
+---
+
+<div class="page-header">
+    <h1>How to deploy Alf.io on <a href="run.pivotal.io" target="_blank">Pivotal Cloud Foundry</a></h1>
+</div>
+<ul class="list-unstyled">
+  <li>
+    <div class="alert alert-warning"><i class="fa fa-warning fa-2x"></i> This tutorial apply to alf.io version 1.5+</div>
+  </li>
+  <li class="media">
+    <h4 class="media-heading">Account setup</h4>
+    <span>In order to proceed, you must create and activate an account on <a href="run.pivotal.io" target="_blank">Pivotal Cloud Foundry</a>.<br/>
+      After that you must download and install the <a href="http://docs.run.pivotal.io/starting/" target="_blank">Pivotal cli tools</a></span>
+  </li>
+  <li class="media">
+    <h4 class="media-heading">Push (deploy) the application</h4>
+    <p>
+      First of all run the following command to log yourself in:<br/>
+      <pre>$ cf login -a https://consoleapi.run.pivotal.io</pre>
+      enter your e-mail and password when requested. After that, you're ready to deploy your new application:
+      <pre>$ cf push <em>YOUR_APP_NAME</em> -p /path/to/alf.io-{VERSION}-boot.war</pre>
+      Please note that the application name will be part of the url (e.g. YOUR_APP_NAME.run.pivotal.io)<br/>
+      that's it! Since the database is missing, the application won't start. But don't worry, we're about to fix that.
+    </p>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/001.png" target="_blank"><img class="media-object" src="images/001_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Create new database instance</h4>
+          <p>Open the Dashboard, and click on <em>"Add Service"</em></p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/002.png" target="_blank"><img class="media-object" src="images/002_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Select the database from marketplace</h4>
+          <p>select <em>"ElephantSQL"</em></p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/003.png" target="_blank"><img class="media-object" src="images/003_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Select the plan</h4>
+          <p>ElephantSQL offers multiple plans. Just pick up the one that would fit your needs. <br/> If you want to do a test-drive, you can easily select their free plan, otherwise we strongly suggest you to pick up one of their paid plans (Pretty Panda should be fine)</p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/004.png" target="_blank"><img class="media-object" src="images/004_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Connect the database to the Application</h4>
+          <p>give a name to your database and bind it to your application</p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/005.png" target="_blank"><img class="media-object" src="images/005_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Restart your application</h4>
+          <p>After adding the database, restart the application from the console</p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/006.png" target="_blank"><img class="media-object" src="images/006_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Retrieve admin password</h4>
+          <p>check the log <pre>cf logs YOUR_APP_NAME --recent</pre> and find the auto-generated password. Then you can access the admin under <code>https://YOUR_APP_NAME.run.pivotal.io/admin/</code></p>
+      </div>
+  </li>
+</ul>
