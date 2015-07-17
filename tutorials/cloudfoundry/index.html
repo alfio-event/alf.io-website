@@ -20,11 +20,11 @@ categories: tutorial
     <h4 class="media-heading">Push (deploy) the application</h4>
     <p>
       First of all run the following command to log yourself in:<br/>
-      <pre>$ cf login -a https://consoleapi.run.pivotal.io</pre>
-      enter your e-mail and password when requested. After that, you're ready to deploy your new application:
-      <pre>$ cf push <em>YOUR_APP_NAME</em> -p /path/to/alf.io-{VERSION}-boot.war</pre>
-      Please note that the application name will be part of the url (e.g. YOUR_APP_NAME.run.pivotal.io)<br/>
-      that's it! Since the database is missing, the application won't start. But don't worry, we're about to fix that.
+      <pre>$ cf login -a https://api.run.pivotal.io</pre>
+      enter your e-mail and password when requested. After that, you're ready to deploy your new application:<br/>
+      <pre>$ cf push <em>YOUR_APP_NAME</em> -p /path/to/alf.io-{VERSION}-boot.war --no-start</pre>
+      Please note that the application name will be part of the url (e.g. YOUR_APP_NAME.cfapps.io)<br/>
+      that's it!<br/>Since the database is not yet configured, we cannot start the application. But don't worry, we're about to fix that.
     </p>
   </li>
   <li class="media">
@@ -68,8 +68,9 @@ categories: tutorial
           <a href="images/005.png" target="_blank"><img class="media-object" src="images/005_mini.png"></a>
       </div>
       <div class="media-body">
-          <h4 class="media-heading">Restart your application</h4>
-          <p>After adding the database, restart the application from the console</p>
+          <h4 class="media-heading">(Re)start your application</h4>
+          <p>After adding the database, either (re)start the application from the console or run the following command:</p>
+          <pre>$ cf restart YOUR_APP_NAME</pre>
       </div>
   </li>
   <li class="media">
@@ -78,7 +79,7 @@ categories: tutorial
       </div>
       <div class="media-body">
           <h4 class="media-heading">Retrieve admin password</h4>
-          <p>check the log <pre>cf logs YOUR_APP_NAME --recent</pre> and find the auto-generated password. Then you can access the admin under <code>https://YOUR_APP_NAME.run.pivotal.io/admin/</code></p>
+          <p>check the log <pre>cf logs YOUR_APP_NAME --recent</pre> and find the auto-generated password. Then you can access the admin under <code>https://YOUR_APP_NAME.cfapps.io/admin/</code></p>
       </div>
   </li>
 </ul>
