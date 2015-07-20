@@ -1,0 +1,76 @@
+---
+layout: default
+title:  Heroku deployment howto - Alf.io
+categories: tutorial
+---
+
+<div class="page-header">
+    <h1>How to deploy Alf.io on <a href="https://www.heroku.com" target="_blank">Heroku</a></h1>
+</div>
+<ul class="list-unstyled">
+  <li>
+    <div class="alert alert-warning"><i class="fa fa-warning fa-2x"></i> This tutorial apply to alf.io version 1.5+</div>
+  </li>
+  <li>
+    <div class="alert alert-warning"><i class="fa fa-warning fa-2x"></i> In order to install alf.io on heroku, you should have the <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java</a> Runtime environment installed locally.</div>
+  </li>
+  <li class="media">
+    <h4 class="media-heading">Account setup</h4>
+    <span>In order to proceed, you must create an account on <a href="https://www.heroku.com" target="_blank">Heroku</a>. After that you must download and install the <a href="https://toolbelt.heroku.com/" target="_blank">Heroku Toolbelt</a></span>
+  </li>
+  <li class="media">
+    <h4 class="media-heading">Create the application</h4>
+    <p>
+      First of all run the following command to log yourself in:<br/>
+      <pre>$ heroku login</pre>
+      enter your e-mail and password when requested. After that, you're ready to create your new application:<br/>
+      <pre>$ heroku create <em>YOUR_APP_NAME</em></pre>
+      Please note that the application name will be part of the url (e.g. YOUR_APP_NAME.herokuapp.com)
+    </p>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/001.png" target="_blank"><img class="media-object" src="images/001_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Edit Application properties</h4>
+          <p>Open the Dashboard and select your application</p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/002.png" target="_blank"><img class="media-object" src="images/002_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Add new add-on</h4>
+          <p>Open the "resources" tab, and click on the "+" near <em>"Find more add-ons..."</em></p>
+      </div>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/003.png" target="_blank"><img class="media-object" src="images/003_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Add Database instance</h4>
+          <p>Search "Heroku Postgres" using the text field and then select the Heroku Postgres plan which fit your needs. For a test-drive we suggest to go with the "Hobby Dev" plan, otherwise "Hobby Basic" should be fine.</p>
+      </div>
+  </li>
+  <li class="media">
+    <h4 class="media-heading">Deploy the application</h4>
+    <p>
+      In order to deploy the application you need to install the <a href="https://github.com/heroku/heroku-deploy" target="_blank">Heroku-Deploy</a> toolbelt plugin:<br/>
+      <pre>$ heroku plugins:install https://github.com/heroku/heroku-deploy</pre><br/>
+      then you can deploy your new application:<br/>
+      <pre>$ heroku deploy:war --war /path/to/alf.io-{VERSION}.war --app <em>YOUR_APP_NAME</em></pre>
+    </p>
+  </li>
+  <li class="media">
+      <div class="media-left">
+          <a href="images/004.png" target="_blank"><img class="media-object" src="images/004_mini.png"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading">Retrieve admin password</h4>
+          <p>check the log <pre>$ heroku logs --source app --tail</pre> and find the auto-generated password. Then you can access the admin under <code>https://YOUR_APP_NAME.herokuapp.com/admin/</code></p>
+      </div>
+  </li>
+</ul>
