@@ -1,0 +1,161 @@
+---
+layout: default
+title:  Check-in howto - Alf.io
+categories: tutorial
+---
+
+<div class="page-header">
+    <h1>How to check-in attendees</h1>
+</div>
+
+<div class="alert alert-warning">
+    <i class="fa fa-warning"></i> Please note that the check-in app needs an <strong>active internet connection</strong> in order to validate the tickets.
+</div>
+
+<div class="page-header">
+    <h3>Configure the account</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li>Install the Android application on your Smartphone from the <a href="https://play.google.com/store/apps/details?id=alfio.backoffice">Google Play Store</a></li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/001.png" target="_blank"><img class="media-object"
+                                                          srcset="images/001_mini.png 1x, images/001.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Create Check-in operator account</h4>
+            <p>Go to the admin section of your alf.io instance, create a new user for your organization, and grant him/her the "Check-in Operator" role</p>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/002.png" target="_blank"><img class="media-object"
+                                                          srcset="images/002_mini.png 1x, images/002.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Password generation</h4>
+            <p>Once the user has been created, alf.io will prompt the auto-generated password for that user. Keep that window opened, you will use the generated password right away.</p>
+        </div>
+    </li>
+</ul>
+
+<div class="page-header" id="configure-app">
+    <h3>Configure the Android App</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li class="media">
+        <div class="media-left">
+            <a href="images/003.png" target="_blank"><img class="media-object"
+                                                          srcset="images/003_mini.png 1x, images/003.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Scan the password within the application</h4>
+            <p>Click on the "+" button and select "Scan QR-Code" from the menu. Then scan the generated password.</p>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/004.png" target="_blank"><img class="media-object"
+                                                          srcset="images/004_mini.png 1x, images/004.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Select the event (optional)</h4>
+            <p>Each organization can have more than one active event. If that's your case, you will be asked to select one event from the list. You can add other events by scanning again the generated password.</p>
+        </div>
+    </li>
+</ul>
+
+<div class="page-header" id="scan-badges">
+    <h3>Scan attendees' badge</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li class="media">
+        <div class="media-left">
+            <a href="images/005.png" target="_blank"><img class="media-object"
+                                                          srcset="images/005_mini.png 1x, images/005.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Select the event from the list</h4>
+            <p>Once you have configured the event, select the corresponding profile from the list.</p>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/006.png" target="_blank"><img class="media-object"
+                                                          srcset="images/006_mini.png 1x, images/006.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Init check-in</h4>
+            <p>Click on "Scan Tickets" in order to start the check-in process.</p>
+        </div>
+    </li>
+</ul>
+
+<div class="page-header">
+    <h3>Possible scan results</h3>
+    <small><i class="fa fa-info-circle"></i> Vibration feedback: once means "successful", three times: "error / action required"</small>
+</div>
+
+<ul class="list-unstyled">
+    <li class="media">
+        <div class="media-left">
+            <a href="images/008.png" target="_blank"><img class="media-object"
+                                                          srcset="images/008_mini.png 1x, images/008.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Check-in successful <abbr title="phone will vibrate once">*</abbr></h4>
+            <p>Everything's OK, the Attendee can enjoy the event</p>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/007.png" target="_blank"><img class="media-object"
+                                                          srcset="images/007_mini.png 1x, images/007.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Attendee must pay the ticket upon arrival <abbr title="phone will vibrate three times">***</abbr></h4>
+            <p>An outstanding payment has been found. Once it has been cleared out, click on "Confirm" to perform check-in</p>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/009.png" target="_blank"><img class="media-object"
+                                                          srcset="images/009_mini.png 1x, images/009.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Ticket already checked in <abbr title="phone will vibrate three times">***</abbr></h4>
+            <p>A ticket can be checked-in only once. This error doesn't necessarily mean that the attendee is trying to cheat. <br>You have to verify if his/her ticket is part of a group reservation, maybe he/she is just showing the wrong one.</p>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-left">
+            <a href="images/010.png" target="_blank"><img class="media-object"
+                                                          srcset="images/010_mini.png 1x, images/010.png 2x"></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Ticket not found <abbr title="phone will vibrate three times">***</abbr></h4>
+            <p>The system is unable to find a match for the scanned ticket, could be one of the following:</p>
+            <ol>
+               <li>You have selected the wrong event from the list</li>
+               <li>The Attendee has modified the ticket (he/she is still the assignee) and is showing the old one</li>
+               <li>The Attendee has reassigned the ticket to someone else and is trying to access the event anyway</li>
+            </ol>
+        </div>
+    </li>
+</ul>
+
+<div class="page-header">
+    <h3>I don't have an android device. What can I do?</h3>
+</div>
+
+<div>
+    <p>Currently we don't have enough resources to develop a native application for iOS. Any help (sponsoring and/or code contribution) would be highly appreciated.</p>
+    <p>In any case, you can still use the check-in functionality of the admin, which allows you to search attendees and do a manual check-in. Access it either from the dashboard or from event detail.</p>
+</div>
+
+
+
+
