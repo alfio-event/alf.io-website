@@ -9,10 +9,7 @@ categories: tutorial
 </div>
 <ul class="list-unstyled">
   <li>
-    <div class="alert alert-warning"><i class="fa fa-warning fa-2x"></i> This tutorial apply to alf.io version 1.5+</div>
-  </li>
-  <li>
-    <div class="alert alert-warning"><i class="fa fa-warning fa-2x"></i> In order to install alf.io on heroku, you should have the <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java</a> Runtime environment installed locally.</div>
+    <div class="alert alert-warning"><i class="fa fa-warning fa-2x"></i> Some of the following steps require that you have a <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java</a><sup>(TM)</sup> Runtime Environment installed on your computer.</div>
   </li>
   <li class="media">
     <h4 class="media-heading">Account setup</h4>
@@ -58,10 +55,12 @@ categories: tutorial
   <li class="media">
     <h4 class="media-heading">Deploy the application</h4>
     <p>
-      In order to deploy the application you need to install the <a href="https://github.com/heroku/heroku-deploy" target="_blank">Heroku-Deploy</a> toolbelt plugin:<br/>
-      <pre>$ heroku plugins:install https://github.com/heroku/heroku-deploy</pre><br/>
+      In order to deploy the application you need to install the <a href="https://github.com/heroku/heroku-cli-deploy" target="_blank">Heroku-Deploy</a> toolbelt plugin:<br/>
+      <pre>$ heroku plugins:install heroku-cli-deploy</pre>
+      create the <code>Procfile</code> deployment descriptor in the current directory, with the following content:<br/>
+      <pre>web: java -Dserver.port=$PORT $JAVA_OPTS -jar alfio-*-boot.war</pre>
       then you can deploy your new application:<br/>
-      <pre>$ heroku deploy:war --war /path/to/alf.io-{VERSION}.war --app <em>YOUR_APP_NAME</em></pre>
+      <pre>$ heroku deploy:jar --jar alf.io-{VERSION}-boot.war --app <em>YOUR_APP_NAME</em></pre>
     </p>
   </li>
   <li class="media">
