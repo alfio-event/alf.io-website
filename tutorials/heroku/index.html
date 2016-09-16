@@ -56,7 +56,8 @@ categories: tutorial
     <h4 class="media-heading">Deploy the application</h4>
     <p>
       In order to deploy the application you need to install the <a href="https://github.com/heroku/heroku-cli-deploy" target="_blank">Heroku-Deploy</a> toolbelt plugin:<br/>
-      <pre>$ heroku plugins:install heroku-cli-deploy</pre>
+      <pre>$ heroku plugins:install heroku-cli-deploy</pre><br/>
+      download <code>alfio-{VERSION}-boot.war</code> from <a href="https://github.com/exteso/alf.io/releases/latest" target="_blank">github</a> in the current directory<br/>
       create the <code>Procfile</code> deployment descriptor in the current directory, with the following content:<br/>
       <pre>web: java -Dserver.port=$PORT $JAVA_OPTS -jar alfio-*-boot.war</pre>
       then you can deploy your new application:<br/>
