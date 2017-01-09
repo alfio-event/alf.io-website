@@ -1,0 +1,52 @@
+---
+layout: default
+title:  Google analytics goals setup - Alf.io
+categories: tutorial
+---
+
+<div class="page-header">
+    <h1>How to setup the "Goals" in Google analytics for measuring the conversion rate</h1>
+</div>
+
+<div class="alert alert-warning">
+    <i class="fa fa-warning"></i> A Google analytics account is required.
+</div>
+
+<div class="page-header">
+    <h3>Set the correct tracking ID in alf.io</h3>
+</div>
+
+<p>In Google analytics create a new property or go to an existing one and get the tracking ID. It has the following form: UA-XXXXXXXX-X (where X are numbers).</p>
+<p>Go to the admin section of your alf.io instance, insert the tracking id and save.</p>
+<div><a href="images/01-alfio-tracking-id.png" target="_blank"><img class="img-responsive center-block" src="images/01-alfio-tracking-id.png"></a></div>
+
+<div class="page-header">
+    <h3>Configure the goal in google analytics</h3>
+</div>
+
+<p>In the admin section of google analytics, after selecting the account and property, in the right there is a "Goals" link as depicted below. Click it.<p>
+<div><a href="images/step-02-analytics-admin.png" target="_blank"><img class="img-responsive center-block" src="images/step-02-analytics-admin.png"></a></div>
+
+
+<p>There is a list of goals and the possibility to create a new one. Click the "+New Goal" button:</p>
+<div><a href="images/step-03-goals.png" target="_blank"><img class="img-responsive center-block" src="images/step-03-goals.png"></a></div>
+
+
+<p>Get the short name of your event. For example, if your alf.io page for selecting the tickets is at https://example.com/event/my-event/, the short name will be "my-event".</p>
+<p>Then in the first step, as pictured in the image below:</p>
+<div><a href="images/step-04-new.png" target="_blank"><img class="img-responsive center-block" src="images/step-04-new.png"></a></div>
+
+<p>Give a name to the goal and select the Type as "Destination". Click "Continue".</p>
+
+<p>Now, the final configuration:</p>
+<div><a href="images/step-05-configuration.png" target="_blank"><img class="img-responsive center-block" src="images/step-05-configuration.png"></a></div>
+
+As a reminder, the event short name we are considering is "my-event", thus in all the paths, "my-event" will be present.
+<ul>
+  <li>The destination must be a "Regular expression" with <code>/event/<strong>my-event</strong>/reservation/[^/]+/success</code> as a value
+  <li>Funnel must be enabled (On)
+  <li>As a first step in the funnel, we set as a name "ticket selection page" and as a Page <code>/event/<strong>my-event</strong>/</code>
+  <li>As a second step, we set as a name "payment page" and as a Page <code>/event/<strong>my-event</strong>/[^/]+/book</code>
+</ul>
+
+<p>Click save and enjoy!</p>
