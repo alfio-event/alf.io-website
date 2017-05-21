@@ -26,6 +26,46 @@ title: Alf.io, the open source ticket reservation system
         });
         });
     });
+
+    var organizersPerRegion = [
+                ['Switzerland', 8],
+                ['Italy', 4],
+                ['Netherlands', 2],
+                ['USA', 2],
+                ['United Kingdom', 1],
+                ['Belgium', 1],
+                ['Bahrain', 1],
+                ['Singapore', 1],
+                ['South Africa', 1]
+            ];
+
+    var mapEl = $('#regions_container');
+    mapEl.ready(function() {
+        var data = [['Country', 'Organizers']];
+        organizersPerRegion.forEach(function(v) {data.push(v)});
+        google.charts.load('current', {'packages':['geochart']});
+        google.charts.setOnLoadCallback(drawRegionsMap(data));
+
+        function drawRegionsMap(stats) {
+            return function() {
+                var data = google.visualization.arrayToDataTable(stats);
+                var options = {};
+                var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+                chart.draw(data, options);
+            }
+        }
+    });
+
+    $('#regions_txt').ready(function() {
+        var textEl = $('#regions_txt')
+        var template = '<tr><td>country</td><td class="text-center">organizers</td></tr>';
+        organizersPerRegion.map(function(opr) {
+            return template.replace('country', opr[0]).replace('organizers', opr[1]);
+        }).forEach(function(t) {
+            $(t).appendTo(textEl);
+        });
+    });
+
   })();
   </script>
 
@@ -195,6 +235,29 @@ title: Alf.io, the open source ticket reservation system
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="container text-center">
+            <h3>Usage map:</h3>
+            <p>Alf.io doesn't send <b>any</b> usage statistics and/or metrics to us. Because we respect your privacy.<br> These are the organizers we know about, and we'd love to know <b>where</b> are you using it, so that we can show it on the map below.</p>
+            <p><a class="btn btn-success btn-lg" href="https://goo.gl/forms/nmpNNETLL4NCUPJt2" target="_blank">Tell us about you!</a></p>
+            <div id="regions_container" class="hidden-xs hidden-sm" style="width:100%">
+                <div id="regions_div" style="width:100%"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <table class="table table-striped visible-xs visible-sm text-left">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>Organizers</th>
+                            </tr>
+                        </thead>
+                        <tbody id="regions_txt">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <script>
