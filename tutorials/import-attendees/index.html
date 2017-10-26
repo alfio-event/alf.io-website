@@ -1,0 +1,145 @@
+---
+layout: default
+title:  Import existing attendees howto - Alf.io
+categories: tutorial
+---
+
+<div class="page-header">
+    <h1>Import existing attendees</h1>
+    <small><span class="label label-success">v. 1.13+</span> this feature is available from version 1.13</small>
+</div>
+
+
+<div class="page-header">
+    <h3>Create your event</h3>
+</div>
+<p>Create your event on your alf.io. Define ticket categories, available seats, and additional information you need to collect. Here below an example</p>
+
+<ul class="list-unstyled">
+    <li></li>
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Define additional information</h4>
+            In this tutorial we'll use the following information: <code>company</code>, <code>gender</code>
+        </div>
+        <div class="media-bottom">
+                <a href="images/res.1.png" target="_blank"><img class="media-object"
+                                                              srcset="images/res.1-mini.png 1x, images/res.1.png 2x"></a>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Open "Import Attendees"</h4>
+            From your event's detail page, select <code>Actions</code>-> <code>Import Attendees</code>
+        </div>
+        <div class="media-right">
+                <img class="media-object" srcset="images/res.2.png 1x">
+        </div>
+    </li>
+</ul>
+
+<div class="page-header">
+    <h3>Import attendees</h3>
+</div>
+
+
+<ul class="list-unstyled" id="import-attendees">
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Fill in the contact info</h4>
+            <p>Fill in the contact info for the reservation. You can decide later if you want a single reservation for all the attendees (max. 100) or if you want to create a reservation for each attendee.</p>
+        </div>
+        <div class="media-bottom">
+                <a href="images/res.3.png" target="_blank"><img class="media-object"
+                                                              srcset="images/res.3-mini.png 1x, images/res.3.png 2x"></a>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Create and upload attendees' file</h4>
+            <p>In order to process your attendees and create a ticket for each of them.</p>
+            <h6>some information are required:</h6>
+            <ul>
+                <li><strong class="text-info">firstName</strong></li>
+                <li><strong class="text-info">lastName</strong></li>
+                <li><strong class="text-info">email</strong></li>
+                <li><strong class="text-info">lang</strong> - attendee's language. ISO-639 code (e.g. "en" for English, "de" for German...)</li>
+            </ul>
+            <h6>some other are not required, but strongly recommended</h6>
+            <ul>
+                <li><strong class="text-info">reference</strong> the unique ticket-id from the existing system. This would help against multiple imports</li>
+            </ul>
+            <h6>and, last but not least, the additional information. In this example:</h6>
+            <ul>
+                <li><strong class="text-info">company</strong></li>
+                <li><strong class="text-info">gender</strong> (M, F, X)</li>
+            </ul>
+            <h6>you can download the example CSV <a href="res/test-alfio.csv" target="_blank">here</a></h6>
+        </div>
+        <div class="media-bottom">
+                <a href="images/res.4.png" target="_blank"><img class="media-object"
+                                                              srcset="images/res.4-mini.png 1x, images/res.4.png 2x"></a>
+            </div>
+    </li>
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Target Ticket Category and options</h4>
+            <p>You can import attendees for one ticket category. If you have multiple categories to import, please repeat the procedure multiple times</p>
+            <p>Additionally, the following options are available:</p>
+            <ul class="list-unstyled">
+                <li><strong class="text-info">Create one reservation per attendee</strong>: alf.io will create a Ticket Reservation for each attendee, as she were buying the ticket by herself. <strong>Mandatory for > 100 attendees</strong></li>
+                <li><strong class="text-info">Forbid ticket reassignment</strong>: Alf.io allows tickets to be assigned to another person. If you don't want that, you can forbid it here</li>
+                <li><strong class="text-info">Add extra seats to event if needed</strong>: if the event on alf.io is already sold-out, you can add extra seats for these attendees.</li>
+            </ul>
+            <p>Once you upload the file, you'll see also the attendees' list here</p>
+        </div>
+        <div class="media-bottom">
+                <a href="images/res.5.png" target="_blank"><img class="media-object"
+                                                              srcset="images/res.5-mini.png 1x, images/res.5.png 2x"></a>
+        </div>
+    </li>
+</ul>
+
+<div class="page-header" id="confirm-import">
+    <h3>Confirm import</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Wait for the process to complete</h4>
+            <p>The import process has been designed to be as less resource-consuming as possible, so that you can launch it while you're selling tickets. <br/>On an average server it takes ~2 min to load 4000 attendees. Just be patient :-)</p>
+        </div>
+        <div class="media-bottom">
+                <a href="images/res.7.png" target="_blank"><img class="media-object"
+                                                                srcset="images/res.7-mini.png 1x, images/res.7.png 2x"></a>
+        </div>
+    </li>
+</ul>
+
+<div class="page-header">
+    <h3>View Results</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Statistics</h4>
+            <p>The added attendees will be included in the statistics. If you've selected a Ticket Category with price > 0 (in the example 80 CHF), the gross income will be updated accordingly</p>
+        </div>
+        <div class="media-bottom">
+                <a href="images/res.8.png" target="_blank"><img class="media-object"
+                                                              srcset="images/res.8-mini.png 1x, images/res.8.png 2x"></a>
+        </div>
+    </li>
+    <li class="media">
+        <div class="media-body">
+            <h4 class="media-heading">View Tickets</h4>
+            <p>You can find the added tickets by clicking on the "tickets" button in the corresponding Ticket Category</p>
+        </div>
+        <div class="media-bottom">
+            <a href="images/res.10.png" target="_blank"><img class="media-object"
+                                                            srcset="images/res.10-mini.png 1x, images/res.10.png 2x"></a>
+        </div>
+    </li>
+</ul>

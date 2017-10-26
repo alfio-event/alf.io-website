@@ -1,0 +1,4 @@
+Firstname,Lastname,email,lang,reference,company,gender
+Homer,Simpson,noreply@alf.io,en,ABC001,Springfield Nuclear Power Plant,M
+Lisa,Simpson,noreply@alf.io,en,ABC002,,F
+Bart,Simpson,noreply@alf.io,en,ABC003,,M
