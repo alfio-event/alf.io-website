@@ -72,15 +72,15 @@ title: Alf.io, the open source ticket reservation system
   })();
   </script>
 
-    <a href="https://github.com/exteso/alf.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+    <a href="https://github.com/alfio-event/alf.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 
     <div class="jumbotron text-center alfio-header">
         <h1 class="title">Alf.io</h1>
         <img class="img-responsive center-block" src="images/responsive.png" alt="desktop, mobile and tablet ready"/>
         <h1>The open source ticket reservation system</h1>
-        <a class="btn btn-lg btn-default" href="https://github.com/exteso/alf.io" target="_blank"><i class="fa fa-github-square"></i> View on github</a>
+        <a class="btn btn-lg btn-default" href="https://github.com/alfio-event/alf.io" target="_blank"><i class="fa fa-github-square"></i> View on github</a>
         <a class="btn btn-lg btn-default" href="https://demo.alf.io/admin/" title="try alf.io!" target="_blank"><i class="fa fa-play-circle"></i> Try it!</a>
-        <a class="btn btn-lg btn-success" href="https://github.com/exteso/alf.io/releases/latest" target="_blank"><i class="fa fa-download"></i> Download</a>
+        <a class="btn btn-lg btn-success" href="https://github.com/alfio-event/alf.io/releases/latest" target="_blank"><i class="fa fa-download"></i> Download</a>
         <div class="text-center" style="margin-top:15px">
           <a href="https://twitter.com/alfio_event" class="twitter-follow-button" data-show-count="false">Follow @alfio_event</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -93,7 +93,7 @@ title: Alf.io, the open source ticket reservation system
       {% include header.html %}
 
         <div class="alert alert-warning"><h2><i class="fa fa-volume-up"></i> version 1.13 is out!</h2>
-            <p>check what's new! <a href="https://github.com/exteso/alf.io/releases/latest" target="_blank">release notes</a>
+            <p>check what's new! <a href="https://github.com/alfio-event/alf.io/releases/latest" target="_blank">release notes</a>
             <ul>
                 <li>Added French translation (thanks to <a href="https://github.com/bjamet" target="_blank">bjamet</a>)</li>
                 <li>Support for "Platform Mode" (apply fees on each ticket sold, currently only for stripe payments)</li>
@@ -168,7 +168,7 @@ title: Alf.io, the open source ticket reservation system
                 <div class="page-header">
                   <h2><i class="fa fa-code"></i> Do you want to contribute?</h2>
                 </div>
-                <span>Yes, you! Do you have any new feature in mind? Don't be shy, send a pull request! Or, if you are not a developer, <a href="https://github.com/exteso/alf.io/issues" target="_blank">file a new issue</a> describing your idea.
+                <span>Yes, you! Do you have any new feature in mind? Don't be shy, send a pull request! Or, if you are not a developer, <a href="https://github.com/alfio-event/alf.io/issues" target="_blank">file a new issue</a> describing your idea.
                   <br/>We need help from developers as well as from:
                   <ul>
                     <li>Usability experts</li>
@@ -275,7 +275,7 @@ title: Alf.io, the open source ticket reservation system
 
         <script>
             $(document).ready(function(){
-                $.getJSON('https://api.github.com/repos/exteso/alf.io/contributors', function(list) {
+                $.getJSON('https://api.github.com/repos/alfio-event/alf.io/contributors', function(list) {
                     list.forEach(function(contributor) {
                         var element = $('#contributors-template').clone();
                         element.find('.contributor-link').attr('href', contributor.html_url);
