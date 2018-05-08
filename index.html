@@ -40,7 +40,8 @@ title: Alf.io, the open source ticket reservation system
                 ['Singapore', 1],
                 ['South Africa', 1],
                 ['Morocco', 1],
-                ['Japan', 1]
+                ['Japan', 1],
+                ['Canada', 1]
             ];
 
     var mapEl = $('#regions_container');
@@ -93,12 +94,14 @@ title: Alf.io, the open source ticket reservation system
 
       {% include header.html %}
 
-        <div class="alert alert-warning"><h2><i class="fa fa-volume-up"></i> version 1.14 is out!</h2>
+        <div class="alert alert-warning"><h2><i class="fa fa-volume-up"></i> version 1.14.1 is out!</h2>
             <p>check what's new! <a href="https://github.com/alfio-event/alf.io/releases/latest" target="_blank">release notes</a>
             <ul>
                 <li>You can now integrate Alf.io with your existing infrastructure, thanks to the brand-new <strong>extensions</strong> system. Browse the <a href="https://github.com/alfio-event/alf.io-extensions" target="_blank">existing catalog</a> and contribute by writing your own extension!</li>
                 <li>Added support for Clever Cloud (tutorial will follow soon)</li>
                 <li>improved UX</li>
+                <li>added Privacy Policy link configuration, for better GDPR compliance</li>
+                <li>official <a href="https://hub.docker.com/r/alfio/alf.io/" target="_blank">docker image</a></li>
             </ul>
         </div>
 
@@ -151,7 +154,7 @@ title: Alf.io, the open source ticket reservation system
                 <div class="page-header">
                     <h2><i class="fa fa-cloud"></i> Cloud ready</h2>
                 </div>
-                <span>Already tested and deployed on <a href="https://www.openshift.com/" target="_blank">Openshift</a> (<a href="tutorials/openshift/" title="install on Openshift">tutorial</a>), <a href="https://run.pivotal.io/" target="_blank">Pivotal Cloud Foundry</a> (<a href="tutorials/cloudfoundry/" title="install on Pivotal Cloud Foundry ">tutorial</a>), <a href="https://www.sap.com/community/topic/cloud-platform.html" target="_blank">SAP Cloud Platform</a> (<a href="https://blogs.sap.com/2017/05/20/deploying-alf.io-oss-event-ticketing-app-on-cloud-foundry/" target="_blank">tutorial</a>), <a href="https://www.heroku.com" target="_blank">Heroku</a> (<a href="tutorials/heroku/" title="Install on Heroku">tutorial</a>), and <a href="https://www.clever-cloud.com" target="_blank">Clever Cloud</a> (tutorial soon)!</span>
+                <span>Already tested and deployed on <a href="https://www.openshift.com/" target="_blank">Openshift</a> (<a href="tutorials/openshift/" title="install on Openshift">tutorial</a>), <a href="https://run.pivotal.io/" target="_blank">Pivotal Cloud Foundry</a> (<a href="tutorials/cloudfoundry/" title="install on Pivotal Cloud Foundry ">tutorial</a>), <a href="https://www.sap.com/community/topic/cloud-platform.html" target="_blank">SAP Cloud Platform</a> (<a href="https://blogs.sap.com/2017/05/20/deploying-alf.io-oss-event-ticketing-app-on-cloud-foundry/" target="_blank">tutorial</a>), <a href="https://www.heroku.com" target="_blank">Heroku</a> (<a href="tutorials/heroku/" title="Install on Heroku">tutorial</a>), <a href="https://cloud.google.com/kubernetes-engine/" target="_blank">Google Kubernetes Engine (GKE)</a> (<a href="https://github.com/stephanj/alfio-k8s" target="_blank">tutorial</a>), and <a href="https://www.clever-cloud.com" target="_blank">Clever Cloud</a> (tutorial soon)!</span>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-8">
                 <div class="page-header">
