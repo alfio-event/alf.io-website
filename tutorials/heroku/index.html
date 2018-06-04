@@ -53,13 +53,22 @@ categories: tutorial
       </div>
   </li>
   <li class="media">
+    <h4 class="media-heading">Install Heroku Deploy plugin</h4>
+      <p>
+          In order to deploy the application you need to install the <a href="https://github.com/heroku/heroku-cli-deploy" target="_blank">Heroku-Deploy</a> toolbelt plugin:<br/>
+          <pre>$ heroku plugins:install heroku-cli-deploy</pre>
+      </p>
+  </li>
+  <li class="media">
     <h4 class="media-heading">Deploy the application</h4>
     <p>
-      In order to deploy the application you need to install the <a href="https://github.com/heroku/heroku-cli-deploy" target="_blank">Heroku-Deploy</a> toolbelt plugin:<br/>
-      <pre>$ heroku plugins:install heroku-cli-deploy</pre><br/>
-      download <code>alfio-{VERSION}-boot.war</code> from <a href="https://github.com/exteso/alf.io/releases/latest" target="_blank">github</a> in the current directory<br/>
-      create the <code>Procfile</code> deployment descriptor in the current directory, with the following content:<br/>
-      <pre>web: java -Dserver.port=$PORT $JAVA_OPTS -jar alfio-*-boot.war</pre>
+      create a new directory and move into it
+      <pre>$ mkdir alfio-heroku; cd alfio-heroku</pre>
+
+      download <code>alfio-{VERSION}-boot.war</code> from <a href="https://github.com/exteso/alf.io/releases/latest" target="_blank">github</a><br/>
+      <pre>curl -OL https://github.com/alfio-event/alf.io/releases/download/{VERSION}/alfio-{VERSION}-boot.war</pre>
+      download the <code>Procfile</code> deployment descriptor:<br/>
+      <pre>$ curl -OL https://raw.githubusercontent.com/alfio-event/alf.io/master/etc/heroku/Procfile</pre>
       then you can deploy your new application:<br/>
       <pre>$ heroku deploy:jar --jar alfio-{VERSION}-boot.war --app <em>YOUR_APP_NAME</em></pre>
     </p>
@@ -70,7 +79,7 @@ categories: tutorial
       </div>
       <div class="media-body">
           <h4 class="media-heading">Retrieve admin password</h4>
-          <p>check the log <pre>$ heroku logs --source app --tail</pre> and find the auto-generated password. Then you can access the admin under <code>https://YOUR_APP_NAME.herokuapp.com/admin/</code></p>
+          <p>check the log <pre>$ heroku logs --source app --app <em>YOUR_APP_NAME</em> --tail</pre> and find the auto-generated password. Then you can access the admin under <code>https://YOUR_APP_NAME.herokuapp.com/admin/</code></p>
       </div>
   </li>
 </ul>
