@@ -29,8 +29,8 @@ excerpt: Looking for a solid open source alternative to EventBrite or MeetUp? Di
     });
 
     var organizersPerRegion = [
-                ['Switzerland', 8],
-                ['Italy', 5],
+                ['Switzerland', 10],
+                ['Italy', 8],
                 ['Netherlands', 2],
                 ['United States', 2],
                 ['United Kingdom', 2],
@@ -42,6 +42,7 @@ excerpt: Looking for a solid open source alternative to EventBrite or MeetUp? Di
                 ['South Africa', 1],
                 ['Morocco', 1],
                 ['Japan', 1],
+                ['Argentina', 1],
                 ['Canada', 1]
             ];
 
@@ -95,21 +96,23 @@ excerpt: Looking for a solid open source alternative to EventBrite or MeetUp? Di
 
       {% include header.html %}
 
-        <div class="alert alert-warning"><h2><i class="fa fa-volume-up"></i> version 1.15 is out!</h2>
+        <div class="alert alert-warning"><h2><i class="fa fa-volume-up"></i> version 1.16 is out!</h2>
             <p>check what's new! <a href="https://github.com/alfio-event/alf.io/releases/latest" target="_blank">release notes</a>
             <ul>
-                <li>Added support for Canadian Tax Code (GST)</li>
-                <li>Invoice / EU Reverse charge improvements</li>
-                <li>Event API v1 (thanks to <a href="https://github.com/minettiandrea" target="_blank">@minettiandrea</a>)</li>
-                <li>Additional fonts for PDFs (receipt, invoice, ticket)</li>
-                <li>UX/UI enhancements</li>
+                <li>Define Attendee Groups and limit access to events/categories (e-mail whitelist)</li>
+                <li>API-Key support: no need to re-generate your credentials if you use another mobile device</li>
+                <li>API V1 enhancements: access using API-Key, create events</li>
+                <li>Display additional options (merchandise, Fees) at check-in (using <a href="https://github.com/alfio-event/alf.io-PI" target="_blank">Alf.io-PI</a>)</li>
+                <li>Export data as XLS</li>
+                <li>(experimental) limit discount code usage</li>
+                <li>New, improved, version of the mobile scanning app for <a href="https://itunes.apple.com/us/app/alf-io-scan/id1425492093" target="_blank">iOS</a>, and <a href="https://play.google.com/store/apps/details?id=alfio.scan" target="_blank">Android</a></li>
             </ul>
         </div>
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="page-header">
-                    <h2><a href="http://www.gnu.org/copyleft/gpl.html" target="_blank"><img src="images/gplv3-88x31.png" alt="GPLv3"></a> Free <small>as in a speech</small></h2>
+                    <h2><a href="http://www.gnu.org/copyleft/gpl.html" target="_blank"><img src="images/gplv3-88x31.png" alt="GPLv3"></a> Free <small>as in freedom</small></h2>
                 </div>
                 <span>Alf.io is <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">free software</a>. You can use it whenever and wherever you want. You can also modify and redistribute it.</span>
             </div>
@@ -136,7 +139,7 @@ excerpt: Looking for a solid open source alternative to EventBrite or MeetUp? Di
                 <div class="page-header">
                     <h2><i class="fa fa-language"></i> Multi-language</h2>
                 </div>
-                <span>The GUI is currently available in Italian, English, German, Dutch and French. Help us to translate it into your language!</span>
+                <span>The GUI is currently available in Italian, English, German, Dutch and French. <a href="https://poeditor.com/join/project/ttBYTmPYdr" target="_blank">Help us to translate it into your language!</a></span>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="page-header">
