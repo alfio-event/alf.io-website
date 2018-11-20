@@ -1,0 +1,33 @@
+---
+layout: default
+title:  Get started with the initial set up in Alf.io | Alf.io Ticketing
+categories: tutorial
+---
+
+<div class="page-header">
+    <h1>How to initially set up Alf.io</h1>
+</div>
+
+<div class="page-header">
+    <h3>Ticket Categories</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li>When you create an Event, you can set a sale period for each Ticket Category.
+        This make sense especially for paid events like conferences, where you usually buy "Blind Bird", "Early Bird", "Full Price" tickets.
+        You can define the sale period by defining the category Validity Range.</li>
+    <li>If you want to set a validity date for the tickets (and not for the category),
+        you can do that by editing the "Advanced Options" for the category and set
+        <i>Custom ticket validity</i> (will be displayed in ticket PDF, email and calendar invitation).
+    </li>
+</ul>
+
+<div class="page-header" id="configure-app">
+    <h3>Stripe</h3>
+</div>
+
+<ul class="list-unstyled">
+    <li>The <i>Stripe's secret key</i> and <i>Stripe's public key</i> can be found <a href="https://dashboard.stripe.com/account/apikeys">on your Stripe Dashboard</a>.</li>
+    <li>The <i>Stripe Connect Client ID</i>, <i>Stripe Connect Callback URL</i> &amp; <i>Stripe Connect WebHook signature key</i>
+        are only used when platform mode" has been activated, and the instance owner wants to collect fees from the organizers, and can just be left empty otherwise.</li>
+</ul>
