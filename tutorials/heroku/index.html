@@ -71,7 +71,7 @@ categories: tutorial
       download the <code>Procfile</code> deployment descriptor:<br/>
       <pre>$ curl -OL https://raw.githubusercontent.com/alfio-event/alf.io/master/etc/heroku/Procfile</pre>
       then you can deploy your new application:<br/>
-      <pre>$ heroku deploy:jar --jar alfio-{VERSION}-boot.war --app <em>YOUR_APP_NAME</em></pre>
+      <pre>$ heroku deploy:jar --jar alfio-{VERSION}-boot.war --jdk=11 --app <em>YOUR_APP_NAME</em></pre>
     </p>
   </li>
   <li class="media">
