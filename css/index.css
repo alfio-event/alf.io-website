@@ -92,3 +92,7 @@ li.media {
 li.alfio-usedby {
     margin-bottom: 10px;
 }
+
+.max-200 {
+    max-width: 200px;
+}
